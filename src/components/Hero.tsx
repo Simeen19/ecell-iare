@@ -135,8 +135,15 @@ const Hero = () => {
               Join Our Community
               </a>
             </Button>
-            <Button variant="outline" size="lg" className="border-2 border-light-mint bg-light-mint/10 backdrop-blur-sm text-light-mint hover:bg-light-mint hover:text-deep-green px-8 py-4 text-lg font-semibold rounded-full smooth-hover hover:scale-105 shadow-soft">
-              Explore Programs
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-2 border-light-mint bg-light-mint/10 backdrop-blur-sm text-light-mint hover:bg-light-mint hover:text-deep-green px-8 py-4 text-lg font-semibold rounded-full smooth-hover hover:scale-105 shadow-soft"
+              asChild
+            >
+              <a href="#quote">
+                Explore Programs
+              </a>
             </Button>
           </div>
         </div>
