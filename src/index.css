@@ -2,41 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* E-Cell Design System with exact color palette */
 
 @layer base {
   :root {
+    /* E-Cell Brand Colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 157 100% 30%;
+    
+    --light-mint: 157 54% 84%;     /* #A5EAD4 */
+    --soft-teal: 162 34% 55%;      /* #66B49F */
+    --pale-aqua: 162 85% 93%;      /* #DCFCF8 */
+    --deep-green: 157 100% 35%;    /* #1A9B74 */
+    --pure-white: 0 0% 100%;       /* #FFFFFF */
+
+    --primary: 157 100% 35%;       /* Deep green */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 162 34% 55%;      /* Soft teal */
+    --secondary-foreground: 0 0% 100%;
+    
+    --accent: 157 54% 84%;         /* Light mint */
+    --accent-foreground: 157 100% 30%;
+    
+    --muted: 162 85% 93%;          /* Pale aqua */
+    --muted-foreground: 157 100% 30%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 157 100% 30%;
+    
+    --border: 162 85% 93%;
+    --input: 162 85% 93%;
+    --ring: 157 100% 35%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --radius: 1rem;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--light-mint)), hsl(var(--soft-teal)), hsl(var(--deep-green)));
+    --gradient-wave: linear-gradient(90deg, hsl(var(--pale-aqua)), hsl(var(--light-mint)), hsl(var(--soft-teal)));
+    --gradient-glass: linear-gradient(135deg, hsl(var(--pure-white) / 0.1), hsl(var(--light-mint) / 0.1));
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Shadows */
+    --shadow-glass: 0 8px 32px hsl(var(--deep-green) / 0.1);
+    --shadow-hover: 0 20px 40px hsl(var(--deep-green) / 0.15);
+    --shadow-soft: 0 4px 16px hsl(var(--soft-teal) / 0.2);
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    /* Animations */
+    --animation-float: float 6s ease-in-out infinite;
+    --animation-pulse-soft: pulse-soft 4s ease-in-out infinite;
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +117,117 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Glass morphism effect */
+  .glass {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--pure-white) / 0.2);
+    box-shadow: var(--shadow-glass);
+  }
+
+  /* Animated background particles */
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    background: hsl(var(--light-mint) / 0.3);
+    animation: var(--animation-float);
+  }
+
+  /* Hero gradient background */
+  .hero-bg {
+    background: var(--gradient-hero);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Smooth hover transitions */
+  .smooth-hover {
+    transition: var(--transition-smooth);
+  }
+
+  /* Bounce hover effect */
+  .bounce-hover {
+    transition: var(--transition-bounce);
+  }
+
+  /* Text gradient */
+  .text-gradient {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--pale-aqua));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--soft-teal));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--deep-green));
+  }
+}
+
+@layer utilities {
+  /* Animation keyframes */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+  }
+
+  @keyframes pulse-soft {
+    0%, 100% { opacity: 0.8; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+  }
+
+  @keyframes wave {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100vw); }
+  }
+
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+
+  .animate-float { animation: float 6s ease-in-out infinite; }
+  .animate-pulse-soft { animation: pulse-soft 4s ease-in-out infinite; }
+  .animate-wave { animation: wave 3s linear infinite; }
+  .animate-fade-in-up { animation: fadeInUp 0.8s ease-out; }
+  .animate-typewriter { 
+    overflow: hidden;
+    border-right: 2px solid hsl(var(--deep-green));
+    white-space: nowrap;
+    animation: typewriter 3s steps(40, end), blink 1s step-end infinite;
   }
 }
