@@ -168,3 +168,5 @@ const Hero = () => {
     </section>;
 };
 export default Hero;
+
+// THIS IS HOW IT'S DONEE. 

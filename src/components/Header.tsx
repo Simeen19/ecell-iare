@@ -34,7 +34,7 @@ const Header = () => {
             <img
               src="/lovable-uploads/d8eb3ef8-2446-46bb-8fe0-f44ab173629b.png"
               alt="E-Cell IARE Logo"
-              className="h-24 w-auto bg-white/10 backdrop-blur-sm rounded-lg p-2 shadow-soft"
+              className="h-16 w-auto bg-white/10 backdrop-blur-sm rounded-lg p-2 shadow-soft"
             />
           </div>
 
