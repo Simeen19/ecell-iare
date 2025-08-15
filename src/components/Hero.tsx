@@ -139,7 +139,7 @@ const Hero = () => {
         <div className="animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-pure-white drop-shadow-lg">
             <span className="block">E-Cell</span>
-            <span className="block text-4xl md:text-5xl mt-2 text-gradient">IARE</span>
+            <span className="block text-4xl md:text-5xl mt-2 text-light-mint font-bold drop-shadow-lg">IARE</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-pure-white/90 mb-8 animate-fade-in-up font-light tracking-wide" style={{ animationDelay: '0.3s' }}>
