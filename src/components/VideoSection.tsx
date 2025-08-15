@@ -113,29 +113,6 @@ const VideoSection = () => {
             <div className="absolute -bottom-2 -left-2 w-8 h-8 bg-soft-teal rounded-full opacity-40 animate-float"></div>
           </div>
         </div>
-
-        {/* Stats Section */}
-        <div 
-          className={`mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 transition-all duration-1000 delay-600 ${
-            isVisible ? 'animate-fade-in-up' : 'opacity-0'
-          }`}
-        >
-          {[
-            { number: '500+', label: 'Active Members' },
-            { number: '50+', label: 'Successful Startups' },
-            { number: '100+', label: 'Events Conducted' },
-            { number: '₹10L+', label: 'Funding Raised' },
-          ].map((stat, index) => (
-            <div key={index} className="text-center glass rounded-2xl p-6 hover:scale-105 smooth-hover">
-              <div className="text-3xl md:text-4xl font-bold text-deep-green mb-2">
-                {stat.number}
-              </div>
-              <div className="text-deep-green/70 font-medium">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
