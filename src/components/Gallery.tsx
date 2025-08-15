@@ -141,8 +141,11 @@ const Gallery = () => {
             <p className="text-deep-green/80 mb-6">
               Join E-Cell IARE and be featured in our next gallery of innovation and success stories.
             </p>
-            <button className="bg-deep-green hover:bg-soft-teal text-pure-white px-8 py-3 rounded-full font-semibold smooth-hover hover:scale-105 shadow-soft">
+            <button>
+             <a href="https://www.instagram.com/ecelliare?igsh=aG0wMnI1MjI0NGoz" target="_blank"rel="noopener noreferrer"
+             className="bg-deep-green hover:bg-soft-teal text-pure-white px-8 py-3 rounded-full font-semibold smooth-hover hover:scale-105 shadow-soft inline-block transition">
               Join Our Community
+              </a>
             </button>
           </div>
         </div>
