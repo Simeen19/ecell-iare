@@ -50,7 +50,7 @@ const Header = () => {
                 key={item.id}
                 variant="ghost"
                 onClick={() => scrollToSection(item.id)}
-                className="text-deep-green hover:text-primary hover:bg-light-mint/20 smooth-hover font-medium"
+                className="text-deep-green/80 hover:text-white hover:bg-primary/90 hover:shadow-lg smooth-hover font-semibold px-6 py-2 rounded-full border border-transparent hover:border-primary/30 backdrop-blur-sm"
               >
                 {item.label}
               </Button>
