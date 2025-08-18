@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
+import IMG_7256 from '@/assets/IMG_7256.jpg';
 import teamCollaboration from '@/assets/team-collaboration.jpg';
 import startupPitch from '@/assets/startup-pitch.jpg';
 import innovationLab from '@/assets/innovation-lab.jpg';
 import networkingEvent from '@/assets/networking-event.jpg';
+import ecell_img2 from '@/assets/ecell_img2.jpg';
+import ecell_img3 from '@/assets/ecell_img3.jpg';
 
 const Gallery = () => {
   const [visibleItems, setVisibleItems] = useState<boolean[]>([]);
@@ -10,46 +13,25 @@ const Gallery = () => {
   const galleryItems = [
     {
       id: 1,
-      image: teamCollaboration,
+      image: ecell_img2,
       title: 'Team Collaboration',
       description: 'Our dynamic teams working together to build innovative solutions',
       category: 'Teamwork'
     },
     {
       id: 2,
-      image: startupPitch,
+      image: IMG_7256,
       title: 'Startup Pitch Event',
       description: 'Entrepreneurs presenting their groundbreaking ideas to investors',
       category: 'Events'
     },
     {
       id: 3,
-      image: innovationLab,
+      image: ecell_img3,
       title: 'Innovation Lab',
       description: 'Cutting-edge workspace where creativity meets technology',
       category: 'Workspace'
     },
-    {
-      id: 4,
-      image: networkingEvent,
-      title: 'Networking Summit',
-      description: 'Building connections that shape the future of entrepreneurship',
-      category: 'Networking'
-    },
-    {
-      id: 5,
-      image: teamCollaboration,
-      title: 'Mentorship Program',
-      description: 'Experienced entrepreneurs guiding the next generation',
-      category: 'Mentorship'
-    },
-    {
-      id: 6,
-      image: innovationLab,
-      title: 'Tech Workshop',
-      description: 'Hands-on learning experiences with latest technologies',
-      category: 'Learning'
-    }
   ];
 
   useEffect(() => {

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import ecell_video1 from '@/assets/ecell_video1.mp4';
 
 const VideoSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -62,38 +63,15 @@ const VideoSection = () => {
           {/* Glassmorphism Video Container */}
           <div className="glass rounded-3xl p-8 relative overflow-hidden">
             <div className="aspect-video bg-deep-green/10 rounded-2xl overflow-hidden relative">
-              {/* Placeholder Video - Replace with actual video */}
-              <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-soft-teal to-deep-green relative">
-                <div className="absolute inset-0 bg-deep-green/20"></div>
-                
-                {/* Play Button */}
-                <button className="relative z-10 w-20 h-20 bg-pure-white/90 rounded-full flex items-center justify-center shadow-lg hover:bg-pure-white hover:scale-110 smooth-hover group">
-                  <svg 
-                    className="w-8 h-8 text-deep-green ml-1 group-hover:scale-110 transition-transform" 
-                    fill="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M8 5v14l11-7z"/>
-                  </svg>
-                </button>
-
-                {/* Video Placeholder Content */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-pure-white text-center p-8">
-                  <h3 className="text-2xl font-bold mb-4">E-Cell IARE Introduction</h3>
-                  <p className="text-lg opacity-90">Watch our story unfold</p>
-                </div>
-              </div>
-              
-              {/* Hidden video element for future implementation */}
               <video
                 ref={videoRef}
-                className="w-full h-full object-cover hidden"
+                className="w-full h-full object-cover"
+                src={ecell_video1}
                 muted
                 playsInline
-              >
-                {/* Add your video source here */}
-                <source src="#" type="video/mp4" />
-              </video>
+                controls
+                poster="/path-to-your-poster-image.jpg" // optional
+              />
             </div>
 
             {/* Video Description */}
