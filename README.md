@@ -1,73 +1,16 @@
-# Welcome to your Lovable project
+# E-Cell Website
 
-## Project info
+This project is the **official website for the Entrepreneurship Cell (E-Cell)**, designed to showcase the spirit of innovation and entrepreneurship. It provides an engaging, modern, and interactive platform for students and visitors to explore E-Cell’s initiatives, events, and community activities.
 
-**URL**: https://lovable.dev/projects/0ba9655a-0dc7-45a6-89c8-673ad28bd74e
+With a sleek and user-friendly design, the website highlights:
 
-## How can I edit this code?
+* **Our Vision & Mission** – Communicating the purpose and goals of the E-Cell.
+* **Events & Workshops** – Displaying upcoming and past events, workshops, and activities.
+* **Media & Highlights** – Featuring photos, videos, and success stories from the E-Cell community.
+* **Inspirational Quotes & Resources** – Motivating students to pursue entrepreneurship and innovation.
 
-There are several ways of editing your application.
+Built with **React, TypeScript, Tailwind CSS, and shadcn-ui**, the website is fully responsive, visually appealing, and optimized for modern web performance.
 
-**Use Lovable**
+It serves as a hub for students to stay updated, get inspired, and engage with the entrepreneurial ecosystem of the college.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/0ba9655a-0dc7-45a6-89c8-673ad28bd74e) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/0ba9655a-0dc7-45a6-89c8-673ad28bd74e) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Site link: https://ecell-iare.vercel.app/
