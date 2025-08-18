@@ -14,21 +14,21 @@ const Gallery = () => {
     {
       id: 1,
       image: ecell_img2,
-      title: 'Team Collaboration',
+      title: 'NEC Finalist',
       description: 'Our dynamic teams working together to build innovative solutions',
       category: 'Teamwork'
     },
     {
       id: 2,
       image: IMG_7256,
-      title: 'Startup Pitch Event',
-      description: 'Entrepreneurs presenting their groundbreaking ideas to investors',
+      title: 'Fun Outing',
+      description: 'Went to Oxygen park for a fun outing',
       category: 'Events'
     },
     {
       id: 3,
       image: ecell_img3,
-      title: 'Innovation Lab',
+      title: 'Deabate',
       description: 'Cutting-edge workspace where creativity meets technology',
       category: 'Workspace'
     },
